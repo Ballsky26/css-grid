@@ -22,12 +22,15 @@ header {
     padding: 40px 0;
 }
 
-.content {
-    display: flex;
+.content::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 .sidebar {
-    flex: 1;
+    float: left;
+    width: 40%;
 }
 
 .sidebar aside {
@@ -42,11 +45,10 @@ header {
 
 main {
     background-color: #e0aa77;
+    padding: 171.5px;
+    width: 60%;
     box-sizing: border-box;
-    flex: 1.5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    float: right;
 }
 
 footer {
