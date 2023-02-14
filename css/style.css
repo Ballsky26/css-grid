@@ -15,29 +15,34 @@ html {
     border: 5px solid #333;
     box-sizing: border-box;
     padding: 5px;
+    display: grid;
+    grid-template-areas: "header header"
+        "aside main"
+        "nav main"
+        "footer footer";
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr 1fr 1.3fr;
 }
 
 header {
     background-color: #b063d8;
     padding: 40px 0;
-}
-
-.content {
+    grid-area: header;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.sidebar {
-    flex: 1;
-}
-
-.sidebar aside {
+aside {
     background-color: #2f93ff;
     padding: 60px 0;
+    grid-area: aside;
 }
 
-.sidebar nav {
+nav {
     background-color: #e45765;
     padding: 100px 0;
+    grid-area: nav;
 }
 
 main {
@@ -47,9 +52,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-area: main;
 }
 
 footer {
     background-color: #666;
     padding: 20px;
+    grid-area: footer;
 }
